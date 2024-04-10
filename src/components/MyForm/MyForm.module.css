@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+.form__inputs {
+  display: flex;
+  gap: 19px;
+}
+.form__input {
+  padding: 12px 16px 12px 16px;
+  gap: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 29px;
+}
+.form__input::placeholder {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 29px;
+}
+.form__input:focus {
+  outline: #737BE1 1px solid;
+}
+
+/*# sourceMappingURL=MyForm.module.css.map */

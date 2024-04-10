@@ -1,0 +1,23 @@
+.wrapper {
+  width: 1920px;
+}
+
+.application {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  padding: 48px 0;
+  background: linear-gradient(0deg, #E9EAF9 0%, #F5F5FF 100%);
+}
+.application__text {
+  width: 1020px;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: center;
+  color: #000000;
+}
+
+/*# sourceMappingURL=Application.module.css.map */

@@ -1,0 +1,104 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  height: 150px;
+}
+.header__logo {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #4C4C4C;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 10px;
+}
+.list__item {
+  text-decoration: none;
+  padding: 8px 24px 8px 24px;
+  gap: 10px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  cursor: pointer;
+  color: #000000;
+}
+.list__item_active {
+  color: #4F58C9;
+  background: #E9EAF9;
+}
+
+.call {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 196px;
+}
+.call__contact {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23px;
+  color: #000000;
+}
+.call__free {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #4C4C4C;
+}
+
+.kapibara {
+  width: 1920px;
+  background: url("../../assets/back-desk.png") no-repeat;
+  background-size: cover;
+  height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.kapibara__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.kapibara__result {
+  padding: 12px 18px;
+  gap: 10px;
+  border-radius: 8px 8px 8px 0;
+  background: #737BE1;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  color: #FFFFFF;
+}
+.kapibara__deadline {
+  padding: 12px 18px 12px 18px;
+  gap: 10px;
+  border-radius: 0 0 8px 8px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  color: #737BE1;
+  text-transform: uppercase;
+  background: #FFFFFF;
+}
+.kapibara__image {
+  position: absolute;
+  top: 68px;
+  right: 385px;
+}
+
+/*# sourceMappingURL=Header.module.css.map */
