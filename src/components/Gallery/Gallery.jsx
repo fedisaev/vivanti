@@ -8,12 +8,13 @@ import galleryFive from "../../assets/gallery/gallery-5.png";
 import gallerySix from "../../assets/gallery/gallery-6.png";
 import gallerySeven from "../../assets/gallery/gallery-7.png";
 import Headling from "../../ui/Headling/Headling.jsx";
+import {forwardRef} from "react";
 
-function Gallery() {
+const Gallery = forwardRef(function Gallery(_, ref) {
     return (
         <section>
             <div className="container">
-                <div className={styles.gallery}>
+                <div ref={ref} className={styles.gallery}>
                     <Headling>Галерея</Headling>
                     <div className={styles.gallery__grid}>
                         <img className={styles.grid__item_1} src={galleryOne} alt='gallery one'/>
@@ -29,6 +30,6 @@ function Gallery() {
             </div>
         </section>
     );
-}
+})
 
 export default Gallery;

@@ -3,12 +3,20 @@ import arrow from "../../assets/ui/arrow.svg";
 import imageLaboratory from "../../assets/laboratory/image-laboratory.png";
 import Headling from "../../ui/Headling/Headling.jsx";
 import MyButton from "../../ui/MyButton/MyButton.jsx";
+import {forwardRef} from "react";
 
-function Laboratory() {
+const Laboratory = forwardRef(function Laboratory({formRef}, ref) {
+
+    const handleForm = () => {
+        formRef.current.scrollIntoView({
+            behavior: 'smooth'
+        })
+    }
+
     return (
         <section className={styles.laboratory}>
             <div className="container">
-                <main className={styles.laboratory__main}>
+                <main ref={ref} className={styles.laboratory__main}>
                     <Headling>Лаборатория</Headling>
                     <img className={styles.laboratory__image}
                          src={imageLaboratory}
@@ -25,7 +33,7 @@ function Laboratory() {
                             результатов.
                         </p>
                     </div>
-                    <MyButton type={'button'}>
+                    <MyButton type={'button'} onClick={handleForm}>
                         <span>Оставить заявку</span>
                         <img src={arrow} alt="go to application"/>
                     </MyButton>
@@ -33,6 +41,6 @@ function Laboratory() {
             </div>
         </section>
     );
-}
+})
 
 export default Laboratory;

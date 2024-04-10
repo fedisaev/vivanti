@@ -4,9 +4,24 @@ import logoHeader from '../../assets/./header/logo-header.png';
 import phoneIcon from '../../assets/./header/phone.png';
 import kapibara from '../../assets/./header/kapibara.png';
 
-function Header() {
+function Header({laboratoryRef,formRef,galleryRef}) {
     const [activeIndex, setActiveIndex] = useState(0);
-    const handleItemClick = index => setActiveIndex(index);
+    const handleItemClick = index => {
+        setActiveIndex(index);
+        if (index === 0) {
+            laboratoryRef.current.scrollIntoView({
+                behavior: 'smooth'
+            })
+            } else if (index === 1) {
+                galleryRef.current.scrollIntoView({
+                    behavior: 'smooth'
+                })
+            } else {
+            formRef.current.scrollIntoView({
+                behavior: 'smooth'
+            })
+        }
+    };
 
     return (
         <section>
@@ -16,29 +31,32 @@ function Header() {
                     <span>Современные методики диагностики</span>
                 </div>
                 <ul className={styles.list}>
-                    <a href="#"
-                       className={`${styles.list__item} ${activeIndex === 0 ? styles.list__item_active : ''}`}
-                       onClick={() => handleItemClick(0)}
-                    >
-                        <li>Лаборатория</li>
-                    </a>
-                    <a href="#"
-                       className={`${styles.list__item} ${activeIndex === 1 ? styles.list__item_active : ''}`}
-                       onClick={() => handleItemClick(1)
-                       }>
-                        <li>Галерея</li>
-                    </a>
-                    <a href="#"
-                       className={`${styles.list__item} ${activeIndex === 2 ? styles.list__item_active : ''}`}
-                       onClick={() => handleItemClick(2)}
-                    >
-                        <li>Оставить заявку</li>
-                    </a>
+                    <li>
+                        <button className={`${styles.list__item} ${activeIndex === 0 ? styles.list__item_active : ''}`}
+                                onClick={() => handleItemClick(0)}
+                        >
+                            Лаборатория
+                        </button>
+                    </li>
+                    <li>
+                        <button className={`${styles.list__item} ${activeIndex === 1 ? styles.list__item_active : ''}`}
+                                onClick={() => handleItemClick(1)
+                                }>
+                            Галерея
+                        </button>
+                    </li>
+                    <li>
+                        <button className={`${styles.list__item} ${activeIndex === 2 ? styles.list__item_active : ''}`}
+                                onClick={() => handleItemClick(2)}
+                        >
+                            Оставить заявку
+                        </button>
+                    </li>
                 </ul>
                 <div className={styles.call}>
-                    <img src={phoneIcon} alt="phone"/>
+                    <a href="tel:+71234567890"><img src={phoneIcon} alt="phone"/></a>
                     <div className={styles.call__phone}>
-                        <span className={styles.call__contact}>+7 123 456 7890</span><br/>
+                        <a className={styles.call__contact} href="tel:+71234567890">+7 123 456 7890</a><br/>
                         <span className={styles.call__free}>Звонок бесплатный</span>
                     </div>
                 </div>

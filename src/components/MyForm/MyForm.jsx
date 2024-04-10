@@ -10,9 +10,9 @@ function MyForm({setModal}) {
     return (
         <form className={styles.form}>
             <div className={styles.form__inputs}>
-                <input className={styles.form__input} type="text" placeholder='Фамилия'/>
-                <input className={styles.form__input} type="text" placeholder='Имя'/>
-                <input className={styles.form__input} type="text" placeholder='Отчество'/>
+                <input required className={styles.form__input} type="text" placeholder='Фамилия'/>
+                <input required className={styles.form__input} type="text" placeholder='Имя'/>
+                <input required className={styles.form__input} type="text" placeholder='Отчество'/>
             </div>
             <MyButton type={'submit'} onClick={handleModal}>
                 <span>Отправить</span>
