@@ -1,19 +1,19 @@
 import {useState} from "react";
 import styles from './Header.module.scss';
-import logoHeader from '../../assets/Header/logo-header.png';
-import phoneIcon from '../../assets/Header/phone.png';
-import kapibara from '../../assets/Header/kapibara.png';
+import logoHeader from '../../assets/./header/logo-header.png';
+import phoneIcon from '../../assets/./header/phone.png';
+import kapibara from '../../assets/./header/kapibara.png';
 
 function Header() {
     const [activeIndex, setActiveIndex] = useState(0);
     const handleItemClick = index => setActiveIndex(index);
 
     return (
-        <div className={styles.wrapper}>
+        <section>
             <header className={`container ${styles.header}`}>
                 <div className={styles.header__logo}>
                     <img src={logoHeader} alt="logo"/>
-                    <span>Современные методики<br/>диагностики</span>
+                    <span>Современные методики диагностики</span>
                 </div>
                 <ul className={styles.list}>
                     <a href="#"
@@ -49,12 +49,10 @@ function Header() {
                         <span className={styles.kapibara__result}>точные результаты</span>
                         <span className={styles.kapibara__deadline}>точно в срок</span>
                     </div>
-                    <div className={styles.kapibara__image}>
-                        <img src={kapibara} alt="kapibara"/>
-                    </div>
+                    <img className={styles.kapibara__image} src={kapibara} alt="kapibara"/>
                 </div>
             </section>
-        </div>
+        </section>
     );
 }
 

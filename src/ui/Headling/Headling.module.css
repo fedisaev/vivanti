@@ -1,8 +1,14 @@
 .headling {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 600;
-  line-height: 43px;
+  line-height: 34px;
   color: #000000;
+}
+@media (min-width: 900px) {
+  .headling {
+    font-size: 36px;
+    line-height: 43px;
+  }
 }
 
 /*# sourceMappingURL=Headling.module.css.map */

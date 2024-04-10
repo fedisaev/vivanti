@@ -1,8 +1,15 @@
 .greetings {
-  font-size: 24px;
+  font-size: 18px;
   font-style: italic;
   font-weight: 600;
-  line-height: 33px;
+  line-height: 25.2px;
   text-align: center;
   color: #000000;
+  margin-top: 45px;
+
+  @media(min-width: 900px) {
+    font-size: 24px;
+    line-height: 33px;
+    margin-top: 0;
+  }
 }

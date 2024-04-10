@@ -1,23 +1,41 @@
 .laboratory {
   background: linear-gradient(0deg, #E9EAF9 0%, #F5F5FF 100%);
-  width: 1920px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 48px 0;
+  min-width: 100vw;
+}
+@media (min-width: 900px) {
+  .laboratory {
+    padding: 48px 0;
+  }
 }
 .laboratory__main {
-  margin-right: 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 36px;
+  display: grid;
+  gap: 24px;
+  justify-items: start;
+  padding: 36px 0;
+}
+@media (min-width: 900px) {
+  .laboratory__main {
+    grid-template-columns: 75% 25%;
+  }
+}
+@media (min-width: 900px) {
+  .laboratory__image {
+    grid-column: 2/2;
+    grid-row: 1/4;
+  }
 }
 .laboratory__text {
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 29px;
+  line-height: 25px;
   color: #000000;
+  padding: 9px 0;
+}
+@media (min-width: 900px) {
+  .laboratory__text {
+    font-size: 21px;
+    line-height: 29px;
+  }
 }
 
 /*# sourceMappingURL=Laboratory.module.css.map */

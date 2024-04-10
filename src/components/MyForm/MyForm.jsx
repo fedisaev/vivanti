@@ -1,5 +1,5 @@
 import styles from './MyForm.module.scss';
-import done from "../../assets/done.svg";
+import done from "../../assets/ui/done.svg";
 import MyButton from "../../ui/MyButton/MyButton.jsx";
 
 function MyForm() {
@@ -10,7 +10,10 @@ function MyForm() {
                 <input className={styles.form__input} type="text" placeholder='Имя'/>
                 <input className={styles.form__input} type="text" placeholder='Отчество'/>
             </div>
-            <MyButton type={'submit'}>Отправить <img src={done} alt="done"/></MyButton>
+            <MyButton type={'submit'}>
+                <span>Отправить</span>
+                <img src={done} alt='done'/>
+            </MyButton>
         </form>
     );
 }
