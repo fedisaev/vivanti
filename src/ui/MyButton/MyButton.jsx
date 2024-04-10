@@ -1,8 +1,8 @@
 import styles from './MyButton.module.scss';
 
-function MyButton({type, children}) {
+function MyButton({type, children, onClick}) {
     return (
-        <button type={type} className={styles.button}>{children}</button>
+        <button onClick={onClick} type={type} className={styles.button}>{children}</button>
     );
 }
 

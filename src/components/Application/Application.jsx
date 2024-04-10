@@ -2,7 +2,7 @@ import styles from './Application.module.scss';
 import Headling from "../../ui/Headling/Headling.jsx";
 import MyForm from "../MyForm/MyForm.jsx";
 
-function Application() {
+function Application({setModal}) {
     return (
         <section className={styles.wrapper}>
             <div className='container'>
@@ -12,7 +12,7 @@ function Application() {
                         Доверьте свои медицинские исследования надежным капибарам-лаборантам и получите качественные
                         результаты в кратчайшие сроки!
                     </p>
-                    <MyForm/>
+                    <MyForm setModal={setModal}/>
                 </div>
             </div>
         </section>
