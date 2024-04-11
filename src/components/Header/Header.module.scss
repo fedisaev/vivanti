@@ -1,12 +1,11 @@
 .header {
-  padding: 30px 0;
+  padding: 2rem 0;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 324px;
 
   @media (min-width: 900px) {
-    padding: 54px 0;
-    width: 1400px;
+    padding: 3.2rem 0;
   }
 
   &__logo {
@@ -18,13 +17,17 @@
     color: #4C4C4C;
 
     @media(min-width: 900px) {
-      flex-direction: row;
-      gap: 24px;
       line-height: 18px;
       font-size: 14px;
+    }
+    @media(min-width: 1250px) {
+      flex-direction: row;
+      gap: 24px;
+    }
 
-      > span {
-        width: 179px;
+    > span {
+      @media(min-width: 1250px) {
+        max-width: 180px;
       }
     }
   }
@@ -32,10 +35,9 @@
 
 .list {
   display: none;
+  list-style: none;
 
   &__item {
-    padding: 8px 24px;
-    gap: 10px;
     border-radius: 4px;
     font-size: 18px;
     font-weight: 500;
@@ -44,6 +46,16 @@
     color: #000000;
     border: none;
     background: none;
+
+    @media(min-width: 900px) {
+      padding: 4px 12px;
+      gap: 5px;
+    }
+
+    @media(min-width: 1250px) {
+      padding: 8px 24px;
+      gap: 10px;
+    }
 
     &_active {
       color: #4F58C9;
@@ -54,7 +66,6 @@
   @media(min-width: 900px) {
     display: flex;
     justify-content: space-between;
-    list-style: none;
     gap: 10px;
   }
 }
@@ -87,29 +98,38 @@
 }
 
 .kapibara {
-  position: relative;
-  width: 360px;
-  height: 243.2px;
-  background: url("../../assets/header/back-mob.png") no-repeat;
+  min-width: 100vw;
+  min-height: 243.2px;
+  background: url("../../assets/header/back-desk.png") no-repeat;
+  background-size: cover;
 
   @media(min-width: 900px) {
-    width: 1920px;
-    height: 560px;
-    background: url("../../assets/header/back-desk.png") no-repeat;
-    display: flex;
+    min-height: 560px;
   }
 
-  &__text {
+  &__inner {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    bottom: -45px;
-    z-index: 1;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    height: 243.2px;
 
     @media(min-width: 900px) {
       position: static;
-      z-index: 0;
+      height: 560px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    bottom: -45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @media(min-width: 900px) {
+      position: static;
     }
   }
 
@@ -144,17 +164,17 @@
   }
 
   &__image {
-    position: absolute;
     width: 170px;
     height: 228px;
-    bottom: 0;
-    left: 100px;
 
     @media(min-width: 900px) {
       width: 367px;
       height: 492px;
+      margin-top: 4.2rem;
+    }
 
-      left: 1175px;
+    @media(min-width: 1250px) {
+      margin-right: 8rem;
     }
   }
 }

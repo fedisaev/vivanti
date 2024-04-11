@@ -1,6 +1,6 @@
 .wrapper {
   background: linear-gradient(0deg, #E9EAF9 0%, #F5F5FF 100%);
-  min-width: 1400px;
+  max-width: 1400px;
 }
 
 .application {

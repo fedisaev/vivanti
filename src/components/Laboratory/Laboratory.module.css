@@ -15,13 +15,28 @@
 }
 @media (min-width: 900px) {
   .laboratory__main {
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 60% 40%;
   }
+}
+@media (min-width: 1250px) {
+  .laboratory__main {
+    grid-template-columns: 74% 26%;
+  }
+}
+.laboratory__image {
+  width: 100%;
 }
 @media (min-width: 900px) {
   .laboratory__image {
     grid-column: 2/2;
     grid-row: 1/4;
+    justify-self: end;
+    margin-right: 30px;
+  }
+}
+@media (min-width: 900px) {
+  .laboratory__paragraph {
+    margin-right: 20px;
   }
 }
 .laboratory__text {

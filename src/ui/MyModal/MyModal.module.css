@@ -3,6 +3,8 @@
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
+  top: 0;
+  left: -25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,7 +39,8 @@
 @media (min-width: 900px) {
   .modal__content {
     flex-direction: row;
-    width: 1400px;
+    max-width: 1350px;
+    width: 100vw;
     height: 453px;
     border-radius: 8px;
     font-size: 24px;

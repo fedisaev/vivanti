@@ -22,7 +22,7 @@ const Laboratory = forwardRef(function Laboratory({formRef}, ref) {
                          src={imageLaboratory}
                          alt="kapibara in laboratory"
                     />
-                    <div>
+                    <div className={styles.laboratory__paragraph}>
                         <p className={styles.laboratory__text}>
                             Наша лаборатория предлагает широкий спектр медицинских исследований, проводимых опытными
                             капибарами-лаборантами. Мы специализируемся на анализе биоматериалов, микробиологических

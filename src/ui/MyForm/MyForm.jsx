@@ -12,6 +12,7 @@ function MyForm({setModal}) {
         e.preventDefault();
         const formData = new FormData(e.target);
         const formProps = Object.fromEntries(formData);
+        console.log(formProps);
         let isFormValid = true;
         if (!formProps.lastName?.trim().length) {
             setFormValid(prevState => ({...prevState, lastName: false}));

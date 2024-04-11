@@ -14,7 +14,7 @@ function App() {
     const laboratoryRef = useRef(null);
     const galleryRef = useRef(null);
     const formRef = useRef(null);
-
+    console.log(modal);
     return (
         <div className='wrapper'>
             <Header laboratoryRef={laboratoryRef}
