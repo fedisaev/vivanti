@@ -1,7 +1,7 @@
 import styles from './Application.module.scss';
 import Headling from "../../ui/Headling/Headling.jsx";
-import MyForm from "../MyForm/MyForm.jsx";
 import {forwardRef} from "react";
+import MyForm from "../../ui/MyForm/MyForm.jsx";
 
 const Application = forwardRef(function Application({setModal}, ref) {
     return (

@@ -45,4 +45,8 @@
   outline: #737BE1 2px solid;
 }
 
+.invalid {
+  outline: #E17373 2px solid;
+}
+
 /*# sourceMappingURL=MyForm.module.css.map */
