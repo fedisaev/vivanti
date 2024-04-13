@@ -100,8 +100,8 @@
 .kapibara {
   min-width: 100vw;
   min-height: 243.2px;
-  background: url("../../assets/header/back-desk.png") no-repeat;
   background-size: cover;
+  background: url("../../assets/header/back-desk.png") no-repeat center;
 
   @media(min-width: 900px) {
     min-height: 560px;
